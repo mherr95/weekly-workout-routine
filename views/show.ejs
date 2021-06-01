@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Day</title>
+</head>
+<body>
+    <nav>
+        <button><a href="/day/" style="text-decoration: none;">Home</a></button>
+    </nav>
+    <h1><%= days.day %></h1>
+    Body Part(s): <%= days.bodyPart %><br>
+    Exercises: <%= days.exercise%>
+    <form action="/day/<%= days.id %>/edit" method="GET">
+    <input type="submit" value="Edit">
+    </form>
+    <form action="/day/<%= days.id %>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete">
+    </form>
+</body>
+</html>
