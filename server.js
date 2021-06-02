@@ -19,12 +19,8 @@ mongoose.connection.once('open', () => {
     console.log('connected to mongo');
 });
 
-app.get('/', (req,res) => {
-    res.send('Herkou Works');
-});
-
 const daysController = require('./Controllers/dayOfWeek.js');
-app.use('/day', daysController);
+app.use('/', daysController);
 
 app.listen(PORT, function() {
     console.log('Connected to Server');
