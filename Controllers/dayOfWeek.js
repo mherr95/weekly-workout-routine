@@ -23,7 +23,7 @@ router.post('/', (req,res) => {
             res.send(error);
         }else {
             console.log(createdDays);
-            res.redirect('/');
+            res.redirect('/day');
         };
     });
 });
@@ -81,7 +81,7 @@ router.delete('/:id', (req,res) => {
             res.send(error);
         }else{
             console.log(dayDelete);
-            res.redirect('/')
+            res.redirect('/day')
         };
     });
 });
@@ -93,7 +93,7 @@ router.put('/:id', (req,res) => {
         if(error){
             res.send(error);
         }else{
-            res.redirect('/');
+            res.redirect('/day');
         };
     });
 });

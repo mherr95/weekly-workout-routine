@@ -20,7 +20,7 @@ mongoose.connection.once('open', () => {
 });
 
 const daysController = require('./Controllers/dayOfWeek.js');
-app.use('/days', daysController);
+app.use('/day', daysController);
 
 app.listen(PORT, function() {
     console.log('Connected to Server');
