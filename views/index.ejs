@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <title>User HomePage</title>
 </head>
 <body>
     <nav>
-        <button><a href="/day/new" style="text-decoration: none;">Create New Workout</a></button>
+        <a href="/day" style="text-decoration: none;">Home</a>
+        <a href="/day/new" style="text-decoration: none;">Create New Workout</a>
     </nav>
     <h1>Weekly Routine</h1>
     <ul>
         <% for(let i = 0; i < days.length; i++) { %>
             <li>
                 <a href="/day/<%= days[i].id%>" style="text-decoration: none;"><%= days[i].day %></a>
+                <ul>
+                    <li>
+                        <%= days[i].bodyPart %>
+                    </li>
+                </ul>
             </li>
         <% } %>
 

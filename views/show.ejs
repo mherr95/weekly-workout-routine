@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <title>Show Day</title>
 </head>
 <body>
     <nav>
-        <button><a href="/day/" style="text-decoration: none;">Home</a></button>
+        <a href="/day" style="text-decoration: none;">Home</a>
     </nav>
     <h1><%= days.day %></h1>
-    Body Part(s): <%= days.bodyPart %><br>
-    Exercises: <%= days.exercise%>
+    <p>
+        Work On: <%= days.bodyPart %><br>
+        Exercises: <%= days.exercise%>
+    </p>
     <form action="/day/<%= days.id %>/edit" method="GET">
     <input type="submit" value="Edit">
     </form>
