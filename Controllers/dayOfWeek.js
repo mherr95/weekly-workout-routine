@@ -17,7 +17,7 @@ router.get('/new', (req,res) => {
 
 
 //Create Route
-router.post('/', (req,res) => {
+router.post('/day', (req,res) => {
     Day.create(req.body, (error, createdDays) => {
         if(error){
             res.send(error);
@@ -30,7 +30,7 @@ router.post('/', (req,res) => {
 
 
 //Index Route
-router.get('/', (req,res) => {
+router.get('/day', (req,res) => {
     Day.find({}, (error, allDays) => {
         if(error){
             res.send(error);
@@ -44,7 +44,7 @@ router.get('/', (req,res) => {
 
 
 //Edit Route
-router.get('/:id/edit', (req,res) => {
+router.get('/day/:id/edit', (req,res) => {
    Day.findById(req.params.id, (error, daysEdit) => {
        if(error){
            res.send(error)
@@ -59,7 +59,7 @@ router.get('/:id/edit', (req,res) => {
 
 
 //Show Route
-router.get('/:id', (req,res) => {
+router.get('/day/:id', (req,res) => {
     Day.findById(req.params.id, (error, foundDays) => {
         if(error){
             res.send(error);
@@ -74,7 +74,7 @@ router.get('/:id', (req,res) => {
 
 
 //Delete Route
-router.delete('/:id', (req,res) => {
+router.delete('/day/:id', (req,res) => {
     console.log(req.params.id);
     Day.findByIdAndRemove(req.params.id, (error, dayDelete) => {
         if(error){
@@ -88,7 +88,7 @@ router.delete('/:id', (req,res) => {
 
 
 //Update Route
-router.put('/:id', (req,res) => {
+router.put('/day/:id', (req,res) => {
     Day.findByIdAndUpdate(req.params.id, req.body, (error, day) => {
         if(error){
             res.send(error);
