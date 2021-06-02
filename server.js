@@ -1,15 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
-const dotenv = require('dotenv').config();
+
+require('dotenv').config();
 
 //App config
 const app = express();
-const db = mongoose.connection;
 const PORT = process.env.PORT || 3000;
 
 //Connect to Mongo
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/' + 'weeklyRoutine'
+
+console.log(MONGODB_URI);
 
 //Middleware
 app.use(express.urlencoded({extended:true}));
@@ -19,14 +21,10 @@ app.use(express.json());
 
 //External Middleware
 mongoose.connect(MONGODB_URI , {useNewUrlParser: true});
-db.once('open', () => {
+mongoose.connection.once('open', () => {
     console.log('connected to mongo');
 });
 
-// Error / success
-db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
-db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
-db.on('disconnected', () => console.log('mongo disconnected'));
 
 app.get('/', (req,res) => {
     res.redirect('/day');
