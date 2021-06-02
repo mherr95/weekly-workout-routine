@@ -10,6 +10,12 @@ const Day = require('../models/day.js')
 /////       ROUTES
 ////////////////////////////////////////////
 
+router.get('/', (req,res) => {
+    res.redirect('/day');
+})
+
+
+
 //New Route
 router.get('/new', (req,res) => {
     res.render('new.ejs');
