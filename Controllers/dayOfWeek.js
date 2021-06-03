@@ -26,7 +26,7 @@ router.post('/day', (req,res) => {
             res.send(error);
         }else {
             console.log(createdDays);
-            res.redirect('/day');
+            res.redirect('/workouts');
         };
     });
 });
@@ -84,7 +84,7 @@ router.delete('/day/:id', (req,res) => {
             res.send(error);
         }else{
             console.log(dayDelete);
-            res.redirect('/day')
+            res.redirect('/workouts')
         };
     });
 });
@@ -96,7 +96,7 @@ router.put('/day/:id', (req,res) => {
         if(error){
             res.send(error);
         }else{
-            res.redirect('/day');
+            res.redirect('/workouts');
         };
     });
 });

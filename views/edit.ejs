@@ -30,18 +30,22 @@
             </ul> 
         </nav>
     </div>
-    <h1>Edit Day</h1>
-    <form action="/day/<%= index %>?_method=PUT" method="POST">
-        <label for="day">Day of The Week</label>
-        <input type="text" name="day" id="day" value="<%= days.day %>">
-        <br>
-        <label for="bodyPart">Work On</label>
-        <input type="text" name="bodyPart" id="bodyPart" value="<%= days.bodyPart %>">
-        <br>
-        <label for="exercise">Exercises</label>
-        <input type="text" name="exercise" id="exercise" value="<%= days.exercise %>">
-        <br>
-        <input type="submit" value="Submit">
+    <h1 class="edit">Edit Workout</h1>
+    <div class="edit-forms">
+        <form action="/day/<%= index %>?_method=PUT" method="POST">
+            <label for="day">Day of The Week</label><br>
+            <input type="text" name="day" id="day" value="<%= days.day %>">
+            <br>
+            <label for="bodyPart">Work On</label><br>
+            <input type="text" name="bodyPart" id="bodyPart"value="<%= days.bodyPart %>"><br>
+            <br>
+            Exercises:
+            <br>
+            <textarea type="textarea" name="exercise" rows="10" cols="60" id="exercise"><%= days.exercise %></textarea>
+            <br>
+            <input type="submit" value="Submit">
         </form>
+    </div>
+    
 </body>
 </html>

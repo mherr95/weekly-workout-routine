@@ -29,27 +29,25 @@
             </ul> 
         </nav>
     </div>
-    <h1>Create Workout</h1>
-    <form action="/day" method="POST">
-    <label for="day">Day of The Week</label>
-    <input type="text" name="day" id="day">
-    <br>
-    <label for="bodyPart">Work On</label>
-    <input type="text" name="bodyPart" id="bodyPart">
-    <br>
-    Exercise(including set and reps)
-    <br>
-    <!-- <fieldset>
-        <label for="exercise">Name of Exercise</label>
-        <input type="text" name="exercise" id="exercise">
-        <label for="sets"># of Sets</label>
-        <input type='text' name="sets" id="sets">
-        <label for="reps"># of Reps</label>
-        <input type="text" name="reps" id="reps">
-    </fieldset> -->
-    <textarea type="textarea" name="exercise" rows="10" cols="90" id="exercise"></textarea>
-    <br>
-    <input type="submit" value="Submit">
-    </form>
+    <h1 class="create">Create Workout</h1>
+    <!-- <div>
+        <img src="/photos/599_194737_motivation.hero.jpg" alt="start.jpg" class="start">
+    </div> -->
+    <div class="create-form">
+        <form action="/day" method="POST">
+            <label for="day">Day of The Week</label><br>
+            <input type="text" name="day" id="day">
+            <br>
+            <label for="bodyPart">Work On</label><br>
+            <input type="text" name="bodyPart" id="bodyPart"><br>
+            <br>
+            Exercises:
+            <br>
+            <textarea type="textarea" name="exercise" rows="10" cols="60" id="exercise"></textarea>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
 </body>
 </html>

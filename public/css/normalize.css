@@ -188,3 +188,18 @@ ol{
     height: auto;
     margin-left: 25%;
 }
+
+.create-form, .edit-forms{
+    margin-left: 37.5%;
+}
+
+.create, .edit{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.start{
+    width: 60%;
+    float: left;
+    margin-right: 10px;
+}
