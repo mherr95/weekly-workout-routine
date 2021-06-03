@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Show Day</title>
 </head>
 <body>
     <nav>
         <a href="/day" style="text-decoration: none;">Home</a>
     </nav>
-    <h1><%= days.day %></h1>
-    <p class="show">
-        Work On: <%= days.bodyPart %><br>
-        Exercises: <%= days.exercise%><br>
-    </p>
-    <form action="/day/<%= days.id %>/edit" method="GET">
-    <input type="submit" style="float: left;" value="Edit">
-    </form>
-    <form action="/day/<%= days.id %>?_method=DELETE" method="POST">
-    <input type="submit" value="Delete">
-    </form>
+    <div class="header">
+        <h1><%= days.day %></h1>
+    </div>
+    <div class="jumbotron">
+        <p class="show">
+            Work On: <%= days.bodyPart %><br>
+            Exercises: <%= days.exercise%><br>
+        </p>
+    </div>
+    <div>
+        <form action="/day/<%= days.id %>/edit" method="GET">
+            <input type="submit" style="float: left;" value="Edit">
+            </form>
+            <form action="/day/<%= days.id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete">
+            </form>
+    </div>
+    
 </body>
 </html>

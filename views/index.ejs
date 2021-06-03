@@ -2,41 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <title>User HomePage</title>
 </head>
 <body>
-    <header>
-        <img src="/photos/imageonline-co-textimage (1).jpg" alt="">
-     </header>
-    <nav>
-        <a href="/day" style="text-decoration: none;">Home</a>
-        <a href="/day/new" style="text-decoration: none;">Create New Workout</a>
-    </nav>
-    <h1>
-        <p class="fitweek">
-            Welcome to FitWeek
-        </p>
-    </h1>
-    <div class="intro">
-        <section>
-            Use FitWeek! FitWeek is deigned to help you create, update, and maintain your weekly workout routine. With FitWeek, you are able to change what you want to work on each day as well as change the different exercises you want to perform. Take control of your workout week and use FitWeek!
-        </section>
-    </div>
-    <div class="workweek-div">
-        <h2 class="index">Schedule</h2>
-    <ul>
-        <% for(let i = 0; i < days.length; i++) { %>
-            <li>
-                <a href="/day/<%= days[i].id%>" style="text-decoration: none;"><%= days[i].day %></a>
-                <br>
-                <li>
-                    <%= days[i].bodyPart %>
+<div class="container-fluid">
+    <div class="navigation">
+        <nav>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link "href="/day" style="text-decoration: none;">Home</a>
                 </li>
+                <li>
+                    <a class="nav-link" href="/day/new" style="text-decoration: none;">Create New Workout</a>
+                </li>
+            </ul> 
+        </nav>
+    </div>
+    <!-- <div class="welcome-container">
+        <div class="jumbotron">
+            <h1>Welcome to FitWeek</h1> 
+        </div>
+    </div> -->
+    <header>
+        <img class= "img-fluid" src="/photos/imageonline-co-textimage (2).jpg" alt="">
+     </header>
+     <div class="workweek-div">
+        <!-- <h2 class="index">Schedule</h2> -->
+    <ol type="1" class="list-inline">
+        <% for(let i = 0; i < days.length; i++) { %>
+            <li class="list-inline-item">
+                <a href="/day/<%= days[i].id%>" style="text-decoration: none; color: black;" class="btn btn-light"><%= days[i].day %></a>
+                <br>
+                <!-- <li>
+                    <%= days[i].bodyPart %>
+                </li> -->
             </li>
         <% } %>
-    </ul>
+    </ol>
+    </div>
+    <div class="jumbotron">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="text-center">About Us</h2>
+            <p class="lead">
+                What is FitWeek?! FitWeek is deigned to help you create, update, and maintain your weekly workout routine. With FitWeek, you are able to change how you workout! FitWeek give you the ability to keep track of what you want to work on each day as well as change the different exercises you want to perform. Take control of your workout week and use FitWeek!
+            </p>
+        </div>   
+    </div>
     <!-- <table>
         <% for (let i = 0; i < days.length; i++) { %>
         <tr>
@@ -44,13 +58,16 @@
                 <a href="/day/<%= days[i].id%>" style="text-decoration: none;"><%= days[i].day %></a>
             </th>
         </tr>
-        <!-- <tr>
+        <tr>
             <td>
                 <%= days[i].bodyPart%>
             </td>
-        </tr> -->
-        <!-- <% } %> -->
-    <!-- </table> -->
-    </div>
+        </tr>
+        <% } %>
+    </table> -->
+</div>
 </body>
 </html>
+
+
+

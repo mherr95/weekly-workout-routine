@@ -8,13 +8,14 @@ header{
 }
 
 body{
-    background-color: white;
+    /* background-color: #659DBD; */
 }
 
 nav{
     background-color: #333;
     overflow: hidden;
     width: 100%;
+    padding: 5px 0px 5px 0px;
 }
 
 nav a{
@@ -31,18 +32,13 @@ nav a{
     margin-bottom: 100px;
 }
 
-.intro{
-    display: inline-block;
+.workweek-div{
+    display: block;
+    width: 100%;
+    margin-left: -140px;
+    font-size: 50px;
 }
 
-ul{
-    list-style-type: none;
-    font-size: large;
-    margin-left: 0%;
-    display: inline-block;
-    padding-left: 0%;
-    
-}
 
 .show{ 
     font-size: large;
@@ -67,19 +63,7 @@ input[type="submit"]{
     color: white;
 }
 
-/* th {
-    width: 50%;
-    border: 1px solid black;
-    border-collapse: collapse;
-    margin: auto;
-    padding: 5px;
-}
 
-table{
-    margin: auto;
-    border: 1px solid black;
-    height: 500px;
-} */
 
 .index{
     margin: 10%;
@@ -94,4 +78,22 @@ table{
     padding-left: 20%;
     display: inline-table;
     text-align: center;
+}
+
+img{
+    margin: 20px;
+    margin-bottom: 40px;
+    /* border-radius: 100%; */
+}
+
+.welcome-container{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-left: 400px;
+    margin-right: 400px
+};
+
+.jumbotron{
+    background-color: black;
 }
