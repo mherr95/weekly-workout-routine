@@ -8,12 +8,23 @@
     <title>User HomePage</title>
 </head>
 <body>
+    
 <div class="container-fluid">
+    <header class="jumbotron">
+        <h1 class="header">Fitness Week</h1>
+        <h2 class="header-description">"Take control of your week"</h2>
+    </header>
     <div class="navigation">
-        <nav>
-            <ul class="nav">
+        <nav class=".fixed-top">
+            <ul class="nav nav-tabs justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link "href="/day" style="text-decoration: none;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/workouts">Workouts</a>
                 </li>
                 <li>
                     <a class="nav-link" href="/day/new" style="text-decoration: none;">Create New Workout</a>
@@ -21,50 +32,31 @@
             </ul> 
         </nav>
     </div>
-    <!-- <div class="welcome-container">
-        <div class="jumbotron">
-            <h1>Welcome to FitWeek</h1> 
-        </div>
-    </div> -->
-    <header>
-        <img class= "img-fluid" src="/photos/imageonline-co-textimage (2).jpg" alt="">
-     </header>
-     <div class="workweek-div">
-        <!-- <h2 class="index">Schedule</h2> -->
-    <ol type="1" class="list-inline">
-        <% for(let i = 0; i < days.length; i++) { %>
-            <li class="list-inline-item">
-                <a href="/day/<%= days[i].id%>" style="text-decoration: none; color: black;" class="btn btn-light"><%= days[i].day %></a>
-                <br>
-                <!-- <li>
-                    <%= days[i].bodyPart %>
-                </li> -->
-            </li>
-        <% } %>
-    </ol>
+     <div class="schedule" id="sched" style="margin: 40px 0px 40px 0px;">
+         <h2 class="text-center">
+            Weekly Schedule
+         </h2>
+         <h6 class="text-center">
+             View/Edit/Add Your workout week below
+        </h6>
+     </div>
+    <div class="workweek-div">
+        <ol type="1" class="list-inline">
+            <% for(let i = 0; i < days.length; i++) { %>
+                <li class="list-inline-item">
+                    <a href="/day/<%= days[i].id%>" style="text-decoration: none; color: black;" class="btn btn-light btn-lg"><%= days[i].day %></a>
+                </li>
+            <% } %>
+        </ol>
     </div>
     <div class="jumbotron">
         <div class="col-md-8 offset-md-2">
             <h2 class="text-center">About Us</h2>
-            <p class="lead">
+            <p class="lead" id="about">
                 What is FitWeek?! FitWeek is deigned to help you create, update, and maintain your weekly workout routine. With FitWeek, you are able to change how you workout! FitWeek give you the ability to keep track of what you want to work on each day as well as change the different exercises you want to perform. Take control of your workout week and use FitWeek!
             </p>
         </div>   
     </div>
-    <!-- <table>
-        <% for (let i = 0; i < days.length; i++) { %>
-        <tr>
-            <th>
-                <a href="/day/<%= days[i].id%>" style="text-decoration: none;"><%= days[i].day %></a>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <%= days[i].bodyPart%>
-            </td>
-        </tr>
-        <% } %>
-    </table> -->
 </div>
 </body>
 </html>

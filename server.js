@@ -34,6 +34,9 @@ app.get('/', (req,res) => {
 const daysController = require('./Controllers/dayOfWeek.js');
 app.use(daysController);
 
+// const workoutController = require('./Controllers/workout.js');
+// app.use(workoutController);
+
 
 
 app.listen(PORT, function() {

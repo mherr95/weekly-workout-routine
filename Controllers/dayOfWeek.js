@@ -101,5 +101,9 @@ router.put('/day/:id', (req,res) => {
     });
 });
 
+//Workout Route
+router.get('/workouts', (req,res) => {
+    res.render('workouts.ejs')
+});
 
 module.exports = router;
