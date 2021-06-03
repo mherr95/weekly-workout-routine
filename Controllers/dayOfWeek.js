@@ -103,7 +103,15 @@ router.put('/day/:id', (req,res) => {
 
 //Workout Route
 router.get('/workouts', (req,res) => {
-    res.render('workouts.ejs')
+    Day.find({}, (error, allDays) => {
+        if(error){
+            res.send(error);
+        }else{
+            res.render('workouts.ejs', {
+                days: allDays
+            });
+        };
+    });
 });
 
 module.exports = router;

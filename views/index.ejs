@@ -24,7 +24,7 @@
                     <a class="nav-link" href="#about">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/workouts">Workouts</a>
+                    <a class="nav-link" href="/workouts">Your Workouts</a>
                 </li>
                 <li>
                     <a class="nav-link" href="/day/new" style="text-decoration: none;">Create New Routine</a>
@@ -32,28 +32,55 @@
             </ul> 
         </nav>
     </div>
+    <div>
+        <img src="/photos/Workout-background.jpeg" alt="Workout.img" class="home">
+    </div>
      <div class="schedule" style="margin: 40px 0px 40px 0px;">
-         <h2 class="text-center">
-            Weekly Schedule
-         </h2>
-         <h6 class="text-center">
-             View/Edit/Add Your workout week below
-        </h6>
+         <h4 class="text-center" id="index-head">
+            Decide Your Weekly Workout Schedule!
+         </h4>
+         <!-- <h6 class="text-center">
+            Decide when and what you do!
+         </h6> -->
      </div>
-    <div class="workweek-div">
+     <div class="workweek-div">
         <ol type="1" class="list-inline">
-            <% for(let i = 0; i < days.length; i++) { %>
-                <li class="list-inline-item">
-                    <a href="/day/<%= days[i].id%>" style="text-decoration: none; color: black;" class="btn btn-light btn-lg"><%= days[i].day %></a>
-                </li>
-            <% } %>
+            <li class="list-inline-item index">
+                <p class="vertical">Your Workout </p>
+                | Monday |
+            </li>
+            <li class="list-inline-item index">
+                <p class="vertical">Your Workout </p>
+                | Tuesday |
+                
+            </li>
+            <li class="list-inline-item index">
+                <p class="vertical">Your Workout </p>
+                | Wednesday |
+            </li>
+            <li class="list-inline-item index">
+                <p class="vertical">Your Workout </p>
+                | Thursday |
+            </li>
+            <li class="list-inline-item index">
+                <p class="vertical">Your Workout </p>
+                | Friday |
+            </li>
+            <li class="list-inline-item index">
+                <p class="vertical">Your Workout </p>
+                | Saturday |
+            </li>
+            <li class="list-inline-item index">
+                <p class="vertical">Your Workout </p>
+                | Sunday |
+            </li>
         </ol>
     </div>
-    <div class="jumbotron">
+    <div class="jumbotron about">
         <div class="col-md-8 offset-md-2">
-            <h2 class="text-center">About Us</h2>
-            <p class="lead" id="about">
-                What is FitWeek?! FitWeek is deigned to help you create, update, and maintain your weekly workout routine. With FitWeek, you are able to change how you workout! FitWeek give you the ability to keep track of what you want to work on each day as well as change the different exercises you want to perform. Take control of your workout week and use FitWeek!
+            <h2 class="text-center" id="about">About Us</h2>
+            <p class="lead" id="about-p">
+                What is FitWeek?! FitWeek is deigned to help you create, update, and maintain your weekly workout routine. With FitWeek, you are able to change how you workout! FitWeek gives you the ability to keep track of what you want to work on each day as well as change the different exercises you want to perform. Take control of your workout week and use FitWeek!
             </p>
         </div>   
     </div>

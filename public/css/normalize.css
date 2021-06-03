@@ -92,8 +92,8 @@ img{
 
 
 .jumbotron .header{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
+    font-family: monospace;
+    font-size: 60px;
     color: black;
     text-align: center;
 }
@@ -104,15 +104,18 @@ img{
     text-align: center;
 };
 
-#sched{
+.schedule{
     background-color: black;
-    margin-top: 40px;
+    margin:auto;
 }
 
 
 ol{
     text-align: center;
-    margin-bottom: 100px;
+}
+
+.index{
+    margin-bottom: 20px;
 }
 
 .header-day{
@@ -131,4 +134,57 @@ ol{
 .edit-form, .delete-form{
     display: inline-block;
     
+}
+
+.workweek-div{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    word-wrap: break-word;
+}
+
+.workout-header{
+    margin-top: 40px;
+    text-align: center;
+}
+
+#vea{
+    margin: 0px 0px 40px 0px;
+    text-align: center;
+}
+
+.vertical {
+    transform: rotate(-45deg);
+    margin-top: 53%;
+    margin-left: 12%;
+    margin-bottom: 30%;
+}
+
+.about{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+#about{
+    font-family: monospace;
+}
+
+#index-head{
+    font-family: monospace;
+}
+
+.home{
+    width: 100%;
+    height: auto;
+    margin:auto;
+}
+
+.list-inline{
+    margin-bottom: 10%;
+}
+
+.calendar{
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
 }

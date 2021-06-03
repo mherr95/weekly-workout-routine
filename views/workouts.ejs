@@ -22,13 +22,35 @@
                     <a class="nav-link" href="/day">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/workouts">Workouts</a>
+                    <a class="nav-link" href="/workouts">Your Workouts</a>
                 </li>
                 <li>
                     <a class="nav-link" href="/day/new" style="text-decoration: none;">Create New Routine</a>
                 </li>
             </ul> 
         </nav>
+    </div>
+    <div>
+        <img src="/photos/calendar-1.png" alt="calendar.png" class="calendar">
+    </div>
+    <div class="workout-header">
+        <h2>
+            Your Weekly Schedule
+        </h2>
+        <h6 id="vea">
+            View/Edit/Add Your workout below
+       </h6>
+    </div>
+    <div>
+        <div class="workweek-div">
+            <ol type="1" class="list-inline">
+                <% for(let i = 0; i < days.length; i++) { %>
+                    <li class="list-inline-item">
+                        <a href="/day/<%= days[i].id%>" style="text-decoration: none; color: black;" class="btn btn-light btn-lg"><%= days[i].day %></a>
+                    </li>
+                <% } %>
+            </ol>
+        </div>
     </div>
 </body>
 </html>
