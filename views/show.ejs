@@ -8,26 +8,57 @@
     <title>Show Day</title>
 </head>
 <body>
-    <nav>
-        <a href="/day" style="text-decoration: none;">Home</a>
-    </nav>
-    <div class="header">
-        <h1><%= days.day %></h1>
+    <header class="jumbotron">
+        <h1 class="header">Fitness Week</h1>
+        <h2 class="header-description">"Take control of your week"</h2>
+    </header>
+    <div class="navigation">
+        <nav class=".fixed-top">
+            <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link "href="/day" style="text-decoration: none;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/day">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/workouts">Workouts</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/day/new" style="text-decoration: none;">Create New Routine</a>
+                </li>
+            </ul> 
+        </nav>
     </div>
-    <div class="jumbotron">
-        <p class="show">
-            Work On: <%= days.bodyPart %><br>
-            Exercises: <%= days.exercise%><br>
-        </p>
+    <div class="header-day">
+        <h1 style="margin: 40px 0px 40px 0px;"><%= days.day %>'s Workout</h1>
     </div>
-    <div>
-        <form action="/day/<%= days.id %>/edit" method="GET">
-            <input type="submit" style="float: left;" value="Edit">
-            </form>
+    <div class="info">
+        <div class="lead">
+            <h6 style="text-decoration: underline;">
+                Work On:
+            </h6>
+            <p>
+                <%= days.bodyPart %>
+            </p>
+            <h6 style="text-decoration: underline;">
+                Exercises List:
+            </h6>
+            <p>
+                 <%= days.exercise%>
+            </p>
+            
+        </div>
+        <div class="edit-form">
+            <form action="/day/<%= days.id %>/edit" method="GET">
+                <input type="submit" value="Edit" class="btn btn-light btn-sm">
+                </form>
+        </div>
+        <div class="delete-form">
             <form action="/day/<%= days.id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete">
-            </form>
+                <input type="submit" value="Delete" class="btn btn-light btn-sm">
+                </form>
+        </div>
     </div>
-    
 </body>
 </html>

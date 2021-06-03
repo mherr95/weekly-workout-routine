@@ -114,3 +114,21 @@ ol{
     text-align: center;
     margin-bottom: 100px;
 }
+
+.header-day{
+    display: inline;
+    text-align: center;
+    margin: 40px 0px 40px 0px;
+}
+
+.show{
+    text-align: center;
+}
+
+.info{
+    text-align: center;
+}
+.edit-form, .delete-form{
+    display: inline-block;
+    
+}

@@ -8,10 +8,28 @@
     <title>Edit Day</title>
 </head>
 <body>
-    <nav>
-            <a href="/day" style="text-decoration: none;">Home</a>
-            <a href="/day/<%= index %>" style="text-decoration: none;">Back</a>
-    </nav>
+    <header class="jumbotron">
+        <h1 class="header">Fitness Week</h1>
+        <h2 class="header-description">"Take control of your week"</h2>
+    </header>
+    <div class="navigation">
+        <nav class=".fixed-top">
+            <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link "href="/day" style="text-decoration: none;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/day">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/workouts">Workouts</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/day/new" style="text-decoration: none;">Create New Routine</a>
+                </li>
+            </ul> 
+        </nav>
+    </div>
     <h1>Edit Day</h1>
     <form action="/day/<%= index %>?_method=PUT" method="POST">
         <label for="day">Day of The Week</label>
