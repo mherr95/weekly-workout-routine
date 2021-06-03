@@ -1,3 +1,12 @@
+*{
+    /* border: 1px solid gold; */
+}
+
+
+header{
+    text-align: center;
+}
+
 body{
     background-color: white;
 }
@@ -5,6 +14,7 @@ body{
 nav{
     background-color: #333;
     overflow: hidden;
+    width: 100%;
 }
 
 nav a{
@@ -12,14 +22,76 @@ nav a{
     color: white;
     text-align: center;
     padding: 15px 15px;
+    margin-right: 15px;
     font-size: 18px;
+}
+
+.fitweek{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.intro{
+    display: inline-block;
 }
 
 ul{
     list-style-type: none;
     font-size: large;
+    margin-left: 0%;
+    display: inline-block;
+    padding-left: 0%;
+    
 }
 
 .show{ 
     font-size: large;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+
+textarea{
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+    resize: none;
+}
+
+input[type="submit"]{
+    width: 100px;
+    background-color:#333;
+    color: white;
+}
+
+/* th {
+    width: 50%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+    padding: 5px;
+}
+
+table{
+    margin: auto;
+    border: 1px solid black;
+    height: 500px;
+} */
+
+.index{
+    margin: 10%;
+    padding: 20px;
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.workweek-div{
+    padding-top: 10px;
+    padding-left: 20%;
+    display: inline-table;
+    text-align: center;
 }

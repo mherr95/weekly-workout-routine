@@ -13,10 +13,10 @@
     <h1><%= days.day %></h1>
     <p class="show">
         Work On: <%= days.bodyPart %><br>
-        Exercises: <%= days.exercise%>
+        Exercises: <%= days.exercise%><br>
     </p>
     <form action="/day/<%= days.id %>/edit" method="GET">
-    <input type="submit" value="Edit">
+    <input type="submit" style="float: left;" value="Edit">
     </form>
     <form action="/day/<%= days.id %>?_method=DELETE" method="POST">
     <input type="submit" value="Delete">

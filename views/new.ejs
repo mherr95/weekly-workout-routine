@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <title>Create Workout</title>
 </head>
 <body>
+    <nav>
+        <a href="/day" style="text-decoration: none;">Home</a>
+    </nav>
     <h1>Create Workout</h1>
     <form action="/day" method="POST">
     <label for="day">Day of The Week</label>
@@ -14,8 +17,17 @@
     <label for="bodyPart">Work On</label>
     <input type="text" name="bodyPart" id="bodyPart">
     <br>
-    <label for="exercise">Exercises</label>
-    <input type="textarea" name="exercise" id="exercise">
+    Exercise(including set and reps)
+    <br>
+    <!-- <fieldset>
+        <label for="exercise">Name of Exercise</label>
+        <input type="text" name="exercise" id="exercise">
+        <label for="sets"># of Sets</label>
+        <input type='text' name="sets" id="sets">
+        <label for="reps"># of Reps</label>
+        <input type="text" name="reps" id="reps">
+    </fieldset> -->
+    <textarea type="textarea" name="exercise" rows="10" cols="90" id="exercise"></textarea>
     <br>
     <input type="submit" value="Submit">
     </form>

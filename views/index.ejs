@@ -7,20 +7,33 @@
     <title>User HomePage</title>
 </head>
 <body>
+    <header>
+        <img src="/photos/imageonline-co-textimage (1).jpg" alt="">
+     </header>
     <nav>
         <a href="/day" style="text-decoration: none;">Home</a>
         <a href="/day/new" style="text-decoration: none;">Create New Workout</a>
     </nav>
-    <h1>Weekly Routine</h1>
+    <h1>
+        <p class="fitweek">
+            Welcome to FitWeek
+        </p>
+    </h1>
+    <div class="intro">
+        <section>
+            Use FitWeek! FitWeek is deigned to help you create, update, and maintain your weekly workout routine. With FitWeek, you are able to change what you want to work on each day as well as change the different exercises you want to perform. Take control of your workout week and use FitWeek!
+        </section>
+    </div>
+    <div class="workweek-div">
+        <h2 class="index">Schedule</h2>
     <ul>
         <% for(let i = 0; i < days.length; i++) { %>
             <li>
                 <a href="/day/<%= days[i].id%>" style="text-decoration: none;"><%= days[i].day %></a>
-                <ul>
-                    <li>
-                        <%= days[i].bodyPart %>
-                    </li>
-                </ul>
+                <br>
+                <li>
+                    <%= days[i].bodyPart %>
+                </li>
             </li>
         <% } %>
     </ul>
@@ -28,15 +41,16 @@
         <% for (let i = 0; i < days.length; i++) { %>
         <tr>
             <th>
-                <%= days[i].day%>
+                <a href="/day/<%= days[i].id%>" style="text-decoration: none;"><%= days[i].day %></a>
             </th>
         </tr>
-        <tr>
+        <!-- <tr>
             <td>
                 <%= days[i].bodyPart%>
             </td>
-        </tr>
-        <% } %>
-    </table> -->
+        </tr> -->
+        <!-- <% } %> -->
+    <!-- </table> -->
+    </div>
 </body>
 </html>
