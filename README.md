@@ -10,7 +10,10 @@ Link to site: https://sleepy-mesa-34044.herokuapp.com/day
 
 # Technologies Used
 
-* Languages and Frameworks - HTML, CSS, Node.js, Express, Heroku, Mongoose, EJS, and Bootstrap. 
+* Languages and Frameworks - HTML, CSS, Node.js, Express, Heroku, Mongoose, EJS, and Bootstrap.
+
+# Approach
+The approach I took here was a simple one. Have a main page where it introduces what the site does and then display links to pages that have different functions. Before attacking the project, I drew up a basic ouline of how I wanted the site to be structured. I then proceeded with the build.
 
 # Features
 
