@@ -29,6 +29,6 @@ Another issue I ran into was making it so that my list of days of the week would
 * Create/Update/Delete workout routines
 * Nav Bar linking to different webpages
 
-# Future Improvements
+# Note to Self
 * Create a log In page
 * Users can add their personal information
