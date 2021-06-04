@@ -1,3 +1,11 @@
+/* Sources
+Related back to previous lecture notes mostly.
+Got help from Professors as well as TA's
+*/
+
+
+
+
 const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
@@ -33,10 +41,6 @@ app.get('/', (req,res) => {
 //Controllers
 const daysController = require('./Controllers/dayOfWeek.js');
 app.use(daysController);
-
-// const workoutController = require('./Controllers/workout.js');
-// app.use(workoutController);
-
 
 
 app.listen(PORT, function() {
