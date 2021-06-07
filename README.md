@@ -2,7 +2,7 @@
 
 # Overview
 
-For Project Two, I deceided to create a RESTful API that keeps track of a users weekly workout routine
+For Project Two, I deceided to create a fullstack application that keeps track of a users weekly workout routine
 
 Once user enters the site, the user will be welcomed by the Fitness Week Title as well as the a collection of buttons and photos. There will be Nav Bar that will have multiple link to the other pages. The users will be able to create, edit, and delete workout routines for each day of the week. 
 
